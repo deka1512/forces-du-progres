@@ -5,7 +5,9 @@ const priorities = [
   { icon: 'i-lucide-users', title: 'Engagement citoyen', text: 'Placer l’écoute, la participation et la responsabilité au centre de la vie collective.' },
   { icon: 'i-lucide-graduation-cap', title: 'Jeunesse et avenir', text: 'Encourager la formation, l’initiative et le leadership responsable des jeunes.' },
   { icon: 'i-lucide-hand-heart', title: 'Solidarité nationale', text: 'Renforcer l’entraide, la cohésion sociale et le respect entre les communautés.' },
-  { icon: 'i-lucide-landmark', title: 'Institutions et dialogue', text: 'Privilégier le dialogue, la paix et la participation dans le respect du cadre légal.' }
+  { icon: 'i-lucide-landmark', title: 'Institutions et dialogue', text: 'Privilégier le dialogue, la paix et la participation dans le respect du cadre légal.' },
+  { icon: 'i-lucide-map-pinned', title: 'Développement local', text: 'Faire remonter les besoins des provinces et encourager des initiatives adaptées aux réalités locales.' },
+  { icon: 'i-lucide-shield-check', title: 'Transparence et responsabilité', text: 'Valoriser la redevabilité, le respect des règles et la gestion responsable des engagements collectifs.' }
 ]
 </script>
 <template>
