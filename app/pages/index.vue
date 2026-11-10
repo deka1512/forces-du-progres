@@ -49,7 +49,7 @@ const priorities = [
         <div class="section-heading"><div><div class="section-eyebrow">THÉMATIQUES ET INFORMATIONS</div><h2>Les sujets qui nous rassemblent</h2><p>Citoyenneté, jeunesse, cohésion sociale, gouvernance et développement local.</p></div><NuxtLink to="/actualites" class="text-link">Toutes les thématiques <UIcon name="i-lucide-arrow-up-right"/></NuxtLink></div>
         <div class="news-grid">
           <UCard v-for="item in newsItems.slice(0,3)" :key="item.title" class="news-card" :ui="{body:'p-0 sm:p-0'}">
-            <img class="news-image" :src="item.image" :alt="item.title"/>
+            <img class="news-image" :src="item.image" :alt="'Illustration : '+item.title"/>
             <div class="news-body"><UBadge>{{item.category}}</UBadge><h3>{{item.title}}</h3><p>{{item.excerpt}}</p></div>
           </UCard>
         </div>
