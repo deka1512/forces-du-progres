@@ -14,7 +14,7 @@ useSeoMeta({title:'Actualités & engagements | Force du Progrès'})
         <div class="filter-row"><UButton v-for="f in filters" :key="f" :color="active===f?'primary':'neutral'" :variant="active===f?'solid':'outline'" @click="active=f">{{f}}</UButton></div>
         <div class="news-grid">
           <UCard v-for="item in filtered" :key="item.title" class="news-card" :ui="{body:'p-0 sm:p-0'}">
-            <img class="news-image" :src="item.image" :alt="item.title"/>
+            <img class="news-image" :src="item.image" :alt="'Illustration : '+item.title"/>
             <div class="news-body"><UBadge>{{item.category}}</UBadge><h3>{{item.title}}</h3><p>{{item.excerpt}}</p></div>
           </UCard>
         </div>
