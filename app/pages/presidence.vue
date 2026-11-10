@@ -1,2 +1,26 @@
 <script setup lang="ts">useSeoMeta({title:'Présidence nationale | Force du Progrès'})</script>
-<template><div><PageHero title="La présidence nationale" description="Présentation de la direction nationale et de ses responsabilités institutionnelles."/><section class="content-section"><UContainer><DemoNotice class="mb-8"/><div class="profile-grid"><div class="profile-placeholder"><strong>JM</strong><span>Portrait officiel à intégrer</span></div><div><div class="section-eyebrow">PRÉSIDENT NATIONAL · IDENTITÉ À VALIDER</div><h2 class="profile-name">Joel Mpaba Mukiri</h2><div class="profile-alias">Alias « Moselu »</div><p class="lead">La présidence nationale assure la représentation institutionnelle, le suivi des coordinations et la communication des orientations validées.</p><p class="muted">Maquette éditoriale : biographie, parcours, attributions exactes et documents officiels à fournir ou valider par le cabinet.</p><UButton to="/contact">Contacter le portail</UButton></div></div><div class="three-grid"><UCard><UIcon name="i-lucide-building-2"/><h3>Cabinet du président</h3><p>Services et collaborateurs à compléter avec les informations validées.</p></UCard><UCard><UIcon name="i-lucide-clipboard-list"/><h3>Missions de la présidence</h3><p>Repères sur les responsabilités et mécanismes de coordination.</p></UCard><UCard><UIcon name="i-lucide-message-square-text"/><h3>Messages officiels</h3><p>Allocutions et déclarations à authentifier avant publication.</p></UCard></div></UContainer></section></div></template>
+<template>
+  <div>
+    <PageHero title="La présidence nationale" description="La direction nationale assure la représentation du mouvement et contribue à la coordination de ses structures."/>
+    <section class="content-section">
+      <UContainer>
+        <div class="profile-grid">
+          <div class="profile-placeholder"><strong>JM</strong><span>Portrait de la présidence</span></div>
+          <div>
+            <div class="section-eyebrow">PRÉSIDENT NATIONAL</div>
+            <h2 class="profile-name">Joel Mpaba Mukiri</h2>
+            <div class="profile-alias">Alias « Moselu »</div>
+            <p class="lead">La présidence nationale porte la représentation institutionnelle, accompagne la coordination des structures et favorise la cohérence des initiatives du mouvement à travers le pays.</p>
+            <p class="muted">Cet espace est consacré à la présentation de la direction nationale, de ses orientations publiques, de ses prises de parole et de ses activités institutionnelles.</p>
+            <UButton to="/contact">Contacter le portail</UButton>
+          </div>
+        </div>
+        <div class="three-grid">
+          <UCard><UIcon name="i-lucide-building-2"/><h3>Représentation nationale</h3><p>Porter la voix du mouvement dans les espaces de dialogue et de coordination.</p></UCard>
+          <UCard><UIcon name="i-lucide-clipboard-list"/><h3>Coordination des structures</h3><p>Favoriser le partage d’informations et la cohérence entre les différents niveaux d’organisation.</p></UCard>
+          <UCard><UIcon name="i-lucide-message-square-text"/><h3>Communication institutionnelle</h3><p>Présenter les orientations, les messages et les informations destinés aux membres et au public.</p></UCard>
+        </div>
+      </UContainer>
+    </section>
+  </div>
+</template>
