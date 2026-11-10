@@ -5,7 +5,7 @@
     <section class="content-section">
       <UContainer>
         <div class="profile-grid">
-          <div class="profile-placeholder"><strong>JM</strong><span>Portrait de la présidence</span></div>
+          <div class="profile-placeholder"><strong>JM</strong><span>Direction nationale</span></div>
           <div>
             <div class="section-eyebrow">PRÉSIDENT NATIONAL</div>
             <h2 class="profile-name">Joel Mpaba Mukiri</h2>
