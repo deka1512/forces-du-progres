@@ -1,0 +1,2 @@
+<script setup lang="ts">defineProps<{title:string;description:string;eyebrow?:string}>()</script>
+<template><section class="page-hero"><div class="hero-orb"/><UContainer class="hero-content"><div class="eyebrow"><span/>{{eyebrow||'FORCE DU PROGRÈS · RDC'}}</div><h1>{{title}}</h1><p>{{description}}</p></UContainer></section></template>
