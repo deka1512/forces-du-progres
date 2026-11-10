@@ -1,11 +1,33 @@
 # Force du Progrès — Portail national
 
-Portail de démonstration construit avec Nuxt 4, Nuxt UI, Vue 3, TypeScript et Lucide.
+Portail web construit avec Nuxt 4, Nuxt UI, Vue 3, TypeScript et Lucide.
 
-Pages : Accueil, Présidence nationale, Organisation, Actualités & communiqués, Activités & médias, Contact.
+## Rubriques
+- Accueil
+- Présidence nationale
+- Organisation
+- Actualités et engagements
+- Activités et médias
+- Contact
 
-Installation : npm install puis npm run dev. Production : npm run build puis npm run preview.
+## Installation
+```bash
+npm install
+npm run dev
+```
 
-Cette version est une maquette front-end. Les publications, activités, dates, lieux, images et exemples de coordinations sont fictifs et ne doivent pas être présentés comme des faits ou communiqués officiels. Le nom Joel Mpaba Mukiri, alias Moselu, est repris selon les indications du commanditaire. Fonction, biographie, organigramme et coordonnées doivent être validés avant mise en ligne. Le formulaire n’est relié à aucun service d’envoi.
+## Production
+```bash
+npm run build
+npm run preview
+```
 
-Identité : bleu #0878B9, bleu nuit #172B42, rouge #D92735, jaune #F2C230 ; titres Barlow, textes Inter.
+Le portail présente les axes éditoriaux et les formats d’engagement communautaire du mouvement. Les coordonnées directes, les biographies détaillées, les titres institutionnels et les informations de gouvernance doivent être renseignés à partir des éléments officiels communiqués par la coordination. Le formulaire de contact est actuellement une interface front-end : il prépare le message mais ne le transmet pas tant qu’un service d’envoi n’est pas raccordé.
+
+## Identité visuelle
+- Bleu : #0878B9
+- Bleu nuit : #172B42
+- Rouge : #D92735
+- Jaune : #F2C230
+- Titres : Barlow
+- Texte : Inter
