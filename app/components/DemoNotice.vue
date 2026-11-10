@@ -1,1 +1,0 @@
-<template><UAlert color="warning" variant="subtle" icon="i-lucide-alert-triangle" title="Contenu de démonstration" description="Les exemples de communiqués, activités, dates et structures locales sont fictifs. Ils doivent être validés avant toute publication officielle."/></template>
