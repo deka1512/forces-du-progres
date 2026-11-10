@@ -1,1 +1,1 @@
-<template><div class="site-shell"><div class="demo-ribbon"><UIcon name="i-lucide-info"/> Maquette de démonstration — certains contenus sont fictifs et doivent être validés avant diffusion.</div><SiteHeader/><main id="main-content"><slot/></main><SiteFooter/></div></template>
+<template><div class="site-shell"><SiteHeader/><main id="main-content"><slot/></main><SiteFooter/></div></template>
