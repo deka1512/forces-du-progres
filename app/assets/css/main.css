@@ -383,3 +383,57 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
 .site-header .brand-mark{
   color:#fff;
 }
+
+
+/* v0.0.7 — blanc intégré à la palette et utilisé sur les fonds bleus */
+:root{
+  --color-white:#ffffff;
+  --fp-white:var(--color-white);
+}
+@theme static{
+  --color-white:#ffffff;
+}
+:is(
+  .site-header,
+  .home-hero,
+  .page-hero,
+  .president-band,
+  .site-footer,
+  .dark-section,
+  .section-dark,
+  .bg-dark,
+  .bg-primary,
+  .bg-primary-dark
+){
+  --section-text-color:var(--color-white);
+}
+:is(
+  .site-header,
+  .home-hero,
+  .page-hero,
+  .president-band,
+  .site-footer,
+  .dark-section,
+  .section-dark,
+  .bg-dark,
+  .bg-primary,
+  .bg-primary-dark
+) :is(
+  h1,h2,h3,h4,h5,h6,
+  p,li,span,small,strong,b,
+  label,dt,dd,figcaption,
+  blockquote,a
+){
+  color:var(--section-text-color);
+}
+:is(.site-header,.home-hero,.page-hero,.president-band,.site-footer)
+:is(.eyebrow,.section-eyebrow){
+  color:var(--color-yellow);
+}
+.site-header .header-cta,
+.site-header .header-cta :is(span,strong){
+  color:var(--color-primary-dark)!important;
+}
+.site-header .brand-mark{
+  color:var(--color-white);
+}
