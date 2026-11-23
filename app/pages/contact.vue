@@ -29,7 +29,7 @@ useSeoMeta({title:'Contact | Force du Progrès'})
             </div>
             <form v-else class="contact-form" @submit.prevent="sent=true">
               <h3>Écrire au portail</h3>
-              <p class="muted">Les messages sont préparés dans cette interface. L’envoi réel sera activé après connexion du canal officiel.
+              <p class="muted">Les messages sont préparés dans cette interface. L’envoi réel sera activé après connexion du canal officiel.</p>
               <UFormField label="Nom complet" required><UInput v-model="state.name" placeholder="Votre nom" icon="i-lucide-user" size="xl" class="w-full" required/></UFormField>
               <UFormField label="Adresse e-mail" required><UInput v-model="state.email" type="email" placeholder="vous@exemple.com" icon="i-lucide-mail" size="xl" class="w-full" required/></UFormField>
               <UFormField label="Objet"><USelect v-model="state.subject" :items="subjects" size="xl" class="w-full"/></UFormField>
