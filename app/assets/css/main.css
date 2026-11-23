@@ -107,3 +107,105 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
 .contact-note{display:flex;align-items:flex-start;gap:11px;margin-top:22px;padding:15px 16px;border:1px solid #e8d9a8;border-left:3px solid #d9ad27;border-radius:7px;background:#fff9e8;color:#6f5a22;font-size:12px;line-height:1.7}
 .contact-note .iconify{flex:0 0 auto;margin-top:2px}
 .contact-detail small{overflow-wrap:anywhere}
+
+
+/* Contraste renforcé des zones sombres + accents jaune institutionnel */
+:root{
+  --fp-ink:#10283f;
+  --fp-light:#f5f8fc;
+  --fp-muted:#d5e0ea;
+  --fp-yellow:#ffd84d;
+}
+.site-header,
+.site-header .mobile-nav{
+  color:var(--fp-light);
+}
+.site-header .brand-copy strong,
+.site-header .nav-link,
+.site-header .mobile-nav-link{
+  color:var(--fp-light);
+}
+.site-header .brand-copy small{
+  color:#d5e0ea;
+}
+.site-header .nav-link.active,
+.site-header .nav-link:hover,
+.site-header .mobile-nav-link:hover,
+.site-header .header-cta{
+  color:var(--fp-yellow);
+}
+.site-header .header-cta{
+  background:var(--fp-yellow)!important;
+  color:var(--fp-ink)!important;
+}
+.home-hero,
+.page-hero,
+.president-band,
+.site-footer{
+  color:var(--fp-light);
+}
+.home-hero h1,
+.home-hero h2,
+.home-hero h3,
+.page-hero h1,
+.page-hero h2,
+.page-hero h3,
+.president-band h1,
+.president-band h2,
+.president-band h3,
+.site-footer h1,
+.site-footer h2,
+.site-footer h3{
+  color:#fff;
+}
+.home-content>p,
+.page-hero p,
+.president-band p,
+.site-footer p{
+  color:var(--fp-muted);
+}
+.home-hero .eyebrow,
+.page-hero .eyebrow,
+.president-band .eyebrow,
+.site-footer .eyebrow{
+  color:var(--fp-yellow);
+}
+.home-hero .eyebrow span,
+.page-hero .eyebrow span{
+  background:var(--fp-yellow);
+}
+.home-hero h1 em,
+.president-band h2 span,
+.site-footer .footer-links h3,
+.site-footer .footer-bottom a{
+  color:var(--fp-yellow);
+}
+.president-band{
+  background:linear-gradient(110deg,#075b8c 0%,#10324d 100%);
+}
+.president-band .president-inner p{
+  color:#e4edf5;
+}
+.site-footer{
+  background:#0b1d2e;
+}
+.site-footer .footer-links a{
+  color:#e4edf5;
+}
+.site-footer .footer-links a:hover,
+.site-footer .footer-bottom a:hover{
+  color:#fff;
+}
+.site-footer .footer-bottom{
+  color:#d5e0ea;
+}
+.site-header .brand-logo-slot,
+.site-footer .brand-logo-slot{
+  border-color:#ffd84d99;
+  color:var(--fp-yellow);
+}
+@media(max-width:850px){
+  .site-header .mobile-nav-link{
+    color:#f5f8fc;
+  }
+}
