@@ -484,3 +484,54 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
 .site-header .header-cta :is(span,strong){
   color:var(--color-primary-dark)!important;
 }
+
+
+/* v0.0.8 — blanc explicite pour tous les textes des sections sombres */
+:is(
+  .dark-section,
+  .section-dark,
+  .bg-dark,
+  .bg-primary,
+  .bg-primary-dark,
+  .dark-bg,
+  .blue-section,
+  .section-blue,
+  .section-blue-dark
+) :is(
+  h1,h2,h3,h4,h5,h6,
+  p,li,span,small,strong,b,
+  label,dt,dd,figcaption,
+  blockquote
+){
+  color:var(--color-white);
+}
+
+/* Les liens restent blancs dans les sections sombres, hors boutons */
+:is(
+  .dark-section,
+  .section-dark,
+  .bg-dark,
+  .bg-primary,
+  .bg-primary-dark,
+  .dark-bg,
+  .blue-section,
+  .section-blue,
+  .section-blue-dark
+) a:not(.button):not(.btn){
+  color:var(--color-white);
+}
+
+/* Les accents de marque restent jaunes sur les fonds sombres */
+:is(
+  .dark-section,
+  .section-dark,
+  .bg-dark,
+  .bg-primary,
+  .bg-primary-dark,
+  .dark-bg,
+  .blue-section,
+  .section-blue,
+  .section-blue-dark
+) :is(.eyebrow,.section-eyebrow,.text-yellow,.text-accent){
+  color:var(--color-yellow);
+}
