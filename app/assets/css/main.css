@@ -535,3 +535,217 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
 ) :is(.eyebrow,.section-eyebrow,.text-yellow,.text-accent){
   color:var(--color-yellow);
 }
+
+
+/* v0.0.9 — système de contraste et d’accessibilité
+   Règles finales ciblées : elles remplacent les anciens ajustements génériques. */
+:root {
+  --color-white: #ffffff;
+  --color-text: #193247;
+  --color-text-muted: #465d72;
+  --color-dark-bg: #10283f;
+  --color-dark-bg-deep: #0b1d2e;
+  --color-dark-text: #ffffff;
+  --color-dark-muted: #e3edf5;
+  --color-accent: #ffdf60;
+  --color-focus: #ffbf47;
+}
+
+/* Fonds sombres réellement utilisés dans les composants du portail */
+.site-header,
+.site-header .mobile-nav,
+.home-hero,
+.page-hero,
+.president-band,
+.site-footer {
+  color: var(--color-dark-text);
+}
+.site-header,
+.site-header .mobile-nav { background-color: var(--color-dark-bg); }
+.home-hero,
+.page-hero { background-color: var(--color-dark-bg); }
+.site-footer { background-color: var(--color-dark-bg-deep); }
+
+/* Titres : blanc franc sur les surfaces sombres */
+.site-header .brand-copy strong,
+.home-hero h1,
+.page-hero h1,
+.president-band h2,
+.site-footer h1,
+.site-footer h2,
+.site-footer h3 {
+  color: #fff;
+}
+
+/* Texte courant : blanc légèrement adouci, mais suffisamment lumineux */
+.home-content > p,
+.home-hero .hero-caption,
+.page-hero p,
+.president-inner p,
+.site-footer p,
+.site-footer .footer-links a,
+.site-footer .footer-bottom,
+.site-header .nav-link,
+.site-header .mobile-nav-link {
+  color: var(--color-dark-muted);
+}
+
+/* Accents jaunes uniquement pour les éléments de repérage */
+.home-hero .eyebrow,
+.page-hero .eyebrow,
+.president-band .section-eyebrow,
+.site-footer .footer-links h3,
+.home-hero h1 em,
+.president-inner h2 span,
+.site-footer .footer-bottom a {
+  color: var(--color-accent);
+}
+.home-hero .eyebrow span,
+.page-hero .eyebrow span { background: var(--color-accent); }
+
+.site-header .nav-link.active,
+.site-header .nav-link:hover,
+.site-header .mobile-nav-link:hover,
+.site-footer .footer-links a:hover {
+  color: var(--color-accent);
+}
+
+/* Les fonds photographiques doivent rester assez assombris pour lire le texte */
+.home-shade {
+  background: linear-gradient(90deg, #071827f5 0%, #0b2239e8 58%, #0b2239b8 100%);
+}
+.page-hero.has-image:before {
+  background: linear-gradient(90deg, #071827f5 0%, #10283fe8 62%, #10283fc9 100%);
+}
+
+/* Boutons : ne jamais hériter automatiquement du blanc des sections */
+.site-header .header-cta,
+.site-header .header-cta :is(span, strong),
+.home-hero .hero-actions .text-white,
+.president-band .text-white,
+.site-footer .text-white {
+  color: #10283f !important;
+}
+.site-header .header-cta {
+  background: #ffdf60 !important;
+  border-color: #ffdf60 !important;
+}
+
+/* Sections claires : texte sombre, y compris les contenus secondaires */
+.intro-strip,
+.content-section,
+.content-section.soft {
+  color: var(--color-text);
+}
+.intro-brand h2,
+.section-heading h2,
+.province-heading h2,
+.profile-name,
+.contact-title,
+.news-body h3,
+.activity-body h3,
+.three-grid h3,
+.contact-form h3 {
+  color: #193247;
+}
+.intro-copy p,
+.section-heading p,
+.intro-grid > p,
+.lead,
+.muted,
+.news-body p,
+.activity-body p,
+.three-grid p,
+.stat-grid small,
+.contact-detail small {
+  color: var(--color-text-muted);
+}
+.contact-detail b,
+.stat-grid .u-card b,
+.province-item {
+  color: #193247;
+}
+
+/* Cartes : fond opaque clair et bordure visible */
+.news-card,
+.activity-card,
+.three-grid .u-card,
+.stat-grid .u-card,
+.contact-grid > .u-card {
+  color: var(--color-text);
+  background: #fff;
+  border-color: #cbd8e3;
+}
+.news-body,
+.activity-body { background: #fff; }
+
+/* Contraste des éléments organisationnels */
+.org-node {
+  color: #193247;
+  background: #fff;
+  border-color: #c5d3df;
+}
+.org-node b { color: #193247; }
+.org-node small { color: #465d72; }
+.org-node.primary-node {
+  color: #fff;
+  background: #07517d;
+  border-color: #07517d;
+}
+.org-node.primary-node b,
+.org-node.primary-node small,
+.org-node.primary-node svg { color: #fff; }
+
+/* Formulaires : labels, saisie et texte indicatif lisibles */
+.contact-form,
+.contact-form label { color: #193247; }
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  color: #193247;
+  background: #fff;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #64788b;
+  opacity: 1;
+}
+
+/* Accessibilité clavier : focus visible sur les liens et contrôles */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[role="button"]:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+.site-header a:focus-visible,
+.site-footer a:focus-visible {
+  outline-color: #ffdf60;
+}
+
+/* Lisibilité et confort de lecture */
+body { line-height: 1.7; }
+.home-content > p,
+.page-hero p,
+.intro-copy p,
+.lead,
+.muted,
+.section-heading p,
+.news-body p,
+.activity-body p,
+.three-grid p {
+  line-height: 1.75;
+}
+@media (max-width: 600px) {
+  .home-content > p,
+  .page-hero p,
+  .intro-copy p,
+  .lead,
+  .muted,
+  .section-heading p {
+    font-size: 16px;
+  }
+}
