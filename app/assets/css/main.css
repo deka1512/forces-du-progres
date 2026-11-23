@@ -341,3 +341,45 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
   .intro-copy p{font-size:15px}
   .page-hero p{font-size:16px}
 }
+
+
+/* v0.0.6 — texte blanc sur toutes les surfaces bleu sombre */
+:is(
+  .site-header,
+  .home-hero,
+  .page-hero,
+  .president-band,
+  .site-footer,
+  .dark-section,
+  .section-dark,
+  .bg-dark
+) :is(
+  h1,h2,h3,h4,h5,h6,
+  p,li,span,small,strong,b,
+  label,dt,dd,figcaption,
+  blockquote,a
+){
+  color:#fff;
+}
+
+/* Accents institutionnels conservés sur les surfaces sombres */
+:is(.site-header,.home-hero,.page-hero,.president-band,.site-footer,.dark-section,.section-dark,.bg-dark)
+:is(.eyebrow,.section-eyebrow){
+  color:#ffdc59;
+}
+:is(.home-hero,.president-band) h1 em,
+.president-band h2 span,
+.site-header .nav-link.active,
+.site-header .nav-link:hover,
+.site-footer .footer-bottom a{
+  color:#ffdc59;
+}
+
+/* Le bouton principal garde un contraste foncé sur son fond jaune */
+.site-header .header-cta,
+.site-header .header-cta :is(span,strong){
+  color:#10283f!important;
+}
+.site-header .brand-mark{
+  color:#fff;
+}
