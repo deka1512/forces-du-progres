@@ -6,7 +6,7 @@ useSeoMeta({title:'Contact | Force du Progrès'})
 </script>
 <template>
   <div>
-    <PageHero title="Entrer en contact" description="Une question, une demande d’information ou une prise de contact institutionnelle ? Utilisez cet espace pour préparer votre message."/>
+    <PageHero title="Entrer en contact" description="Une question, une demande d’information ou une prise de contact institutionnelle ? Utilisez cet espace pour préparer votre message." eyebrow="ÉCHANGES · PRESSE · RENSEIGNEMENTS" image="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=48"/>
     <section class="content-section">
       <UContainer>
         <div class="contact-grid">
