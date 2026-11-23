@@ -620,10 +620,7 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
 
 /* Boutons : ne jamais hériter automatiquement du blanc des sections */
 .site-header .header-cta,
-.site-header .header-cta :is(span, strong),
-.home-hero .hero-actions .text-white,
-.president-band .text-white,
-.site-footer .text-white {
+.site-header .header-cta :is(span, strong) {
   color: #10283f !important;
 }
 .site-header .header-cta {
