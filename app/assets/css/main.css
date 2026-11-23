@@ -103,3 +103,7 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
 @media(max-width:850px){:root{--header-height:72px}.brand-logo-slot{width:46px;height:46px;flex-basis:46px}.brand-copy strong{font-size:15px}.site-header .nav-link:after{display:none}.page-hero{min-height:310px}.content-section{padding-top:65px;padding-bottom:65px}.footer-main{grid-template-columns:1fr 1fr;gap:35px}.footer-main>div:first-child{grid-column:1/-1}}
 @media(max-width:600px){.home-hero{min-height:570px}.home-hero h1{font-size:clamp(58px,15vw,76px)}.page-hero{min-height:300px}.page-hero h1{font-size:39px}.page-hero .hero-content{padding-top:48px;padding-bottom:48px}.profile-visual{min-height:300px}.footer-main{grid-template-columns:1fr;gap:28px}.footer-main>div:first-child{grid-column:auto}.footer-bottom{align-items:flex-start;flex-direction:column}.content-section{padding-top:52px;padding-bottom:52px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.three-grid .u-card,.news-card,.activity-card,.nav-link:after{transition:none}}
+
+.contact-note{display:flex;align-items:flex-start;gap:11px;margin-top:22px;padding:15px 16px;border:1px solid #e8d9a8;border-left:3px solid #d9ad27;border-radius:7px;background:#fff9e8;color:#6f5a22;font-size:12px;line-height:1.7}
+.contact-note .iconify{flex:0 0 auto;margin-top:2px}
+.contact-detail small{overflow-wrap:anywhere}
