@@ -17,7 +17,7 @@ const priorities = [
       <UContainer class="home-content">
         <div class="eyebrow light"><span/>PORTAIL NATIONAL · RDC</div>
         <h1>FORCE DU<br/><em>PROGRÈS</em></h1>
-        <p>Un espace de présentation et d’information consacré à l’engagement citoyen, à la solidarité et à la participation communautaire en République démocratique du Congo.</p>
+        <p>Un portail d’information pour découvrir les repères institutionnels, les thématiques publiques et les espaces de communication de la Force du Progrès en République démocratique du Congo.</p>
         <div class="hero-actions">
           <UButton to="/organisation" size="xl">Découvrir l’organisation</UButton>
           <UButton to="/actualites" size="xl" color="neutral" class="text-white" variant="outline">Nos engagements</UButton>
@@ -27,8 +27,20 @@ const priorities = [
     </section>
     <section class="intro-strip">
       <UContainer class="intro-grid">
-        <div><div class="section-eyebrow">UNE AMBITION COLLECTIVE</div><h2>Agir ensemble.<br/><span>Faire progresser la société.</span></h2></div>
-        <p>La Force du Progrès est présentée ici à travers les valeurs de responsabilité, de solidarité, de dialogue et de participation citoyenne. Ce portail permet de découvrir les repères du mouvement, ses thématiques d’engagement et ses espaces de communication.</p>
+        <div class="intro-brand">
+          <div class="section-eyebrow">UNE AMBITION COLLECTIVE</div>
+          <h2>Agir ensemble.<br/><span>Faire progresser la société.</span></h2>
+          <div class="intro-logo-placeholder" role="img" aria-label="Emplacement réservé à la photographie du logo officiel de la Force du Progrès">
+            <UIcon name="i-lucide-image"/>
+            <strong>LOGO OFFICIEL</strong>
+            <small>EMPLACEMENT RÉSERVÉ À L’IMAGE DU MOUVEMENT</small>
+          </div>
+        </div>
+        <div class="intro-copy">
+          <p>La Force du Progrès porte une ambition collective : encourager l’engagement citoyen, renforcer la solidarité et contribuer à une société où chaque communauté peut prendre part à la dynamique nationale.</p>
+          <p>À travers ses repères institutionnels, ses structures et ses espaces de communication, ce portail présente les orientations du mouvement et facilite l’accès à l’information. Il met en lumière les enjeux de la jeunesse, de la cohésion sociale, du dialogue, de la responsabilité publique et du développement local.</p>
+          <p>De Kinshasa aux différentes provinces de la République démocratique du Congo, l’objectif est de rapprocher les initiatives, de valoriser les contributions et de faire progresser le dialogue au service de l’intérêt collectif.</p>
+        </div>
       </UContainer>
     </section>
     <section class="content-section">
@@ -51,7 +63,7 @@ const priorities = [
         <div class="section-heading"><div><div class="section-eyebrow">THÉMATIQUES ET INFORMATIONS</div><h2>Les sujets qui nous rassemblent</h2><p>Citoyenneté, jeunesse, cohésion sociale, gouvernance et développement local.</p></div><NuxtLink to="/actualites" class="text-link">Toutes les thématiques <UIcon name="i-lucide-arrow-up-right"/></NuxtLink></div>
         <div class="news-grid">
           <UCard v-for="item in newsItems.slice(0,3)" :key="item.title" class="news-card" :ui="{body:'p-0 sm:p-0'}">
-            <img class="news-image" :src="item.image" :alt="'Illustration : '+item.title"/>
+            <img class="news-image" :src="item.image" :alt="'Illustration : '+item.title" loading="lazy" decoding="async"/>
             <div class="news-body"><UBadge>{{item.category}}</UBadge><h3>{{item.title}}</h3><p>{{item.excerpt}}</p></div>
           </UCard>
         </div>

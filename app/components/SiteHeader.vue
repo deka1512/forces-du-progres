@@ -8,18 +8,19 @@ watch(()=>route.fullPath,()=>open.value=false)
   <header class="site-header">
     <UContainer class="header-inner">
       <NuxtLink to="/" class="brand" aria-label="Force du Progrès, accueil">
-        <span class="brand-mark">FP</span>
+        <span class="brand-logo-slot" aria-label="Emplacement du logo officiel">LOGO</span>
         <span class="brand-copy"><strong>FORCE DU PROGRÈS</strong><small>PORTAIL NATIONAL · RDC</small></span>
       </NuxtLink>
       <nav class="desktop-nav" aria-label="Navigation principale">
         <NuxtLink v-for="item in links" :key="item.to" :to="item.to" :class="['nav-link',{active:route.path===item.to}]">{{item.label}}</NuxtLink>
       </nav>
       <UButton to="/contact" class="header-cta">Nous contacter</UButton>
-      <UButton class="mobile-toggle" color="neutral" variant="ghost" :icon="open?'i-lucide-x':'i-lucide-menu'" aria-label="Ouvrir le menu" @click="open=!open"/>
+      <UButton class="mobile-toggle" color="neutral" variant="ghost" :icon="open?'i-lucide-x':'i-lucide-menu'" :aria-label="open?'Fermer le menu':'Ouvrir le menu'" :aria-expanded="open" aria-controls="mobile-navigation" @click="open=!open"/>
     </UContainer>
-    <div v-if="open" class="mobile-nav">
+    <div v-if="open" id="mobile-navigation" class="mobile-nav">
       <UContainer>
         <NuxtLink v-for="item in links" :key="item.to" :to="item.to" class="mobile-nav-link">{{item.label}} <UIcon name="i-lucide-chevron-right"/></NuxtLink>
+        <UButton to="/contact" block class="mt-4">Nous contacter</UButton>
       </UContainer>
     </div>
   </header>

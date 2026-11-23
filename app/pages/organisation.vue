@@ -1,7 +1,7 @@
 <script setup lang="ts">import { provinces } from '~/data/site';useSeoMeta({title:'Organisation | Force du Progrès'})</script>
 <template>
   <div>
-    <PageHero title="Organisation nationale" description="Une organisation structurée autour de la coordination nationale et de relais territoriaux à travers la République démocratique du Congo."/>
+    <PageHero title="Organisation nationale" description="Une organisation structurée autour de la coordination nationale et de relais territoriaux à travers la République démocratique du Congo." eyebrow="STRUCTURES · TERRITOIRES · COORDINATION" image="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=48"/>
     <section class="content-section">
       <UContainer>
         <div class="section-heading"><div><div class="section-eyebrow">STRUCTURE ORGANISATIONNELLE</div><h2>Une coordination à plusieurs niveaux</h2><p>Une architecture qui rapproche les orientations nationales des réalités locales.</p></div></div>

@@ -7,14 +7,14 @@ useSeoMeta({title:'Actualités & engagements | Force du Progrès'})
 </script>
 <template>
   <div>
-    <PageHero title="Actualités & engagements" description="Les grandes thématiques, les prises de parole et les informations qui rythment la vie du mouvement."/>
+    <PageHero title="Actualités & engagements" description="Les grandes thématiques, les prises de parole et les informations qui rythment la vie du mouvement." eyebrow="INFORMER · EXPLIQUER · PARTAGER" image="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1200&q=48"/>
     <section class="content-section">
       <UContainer>
         <div class="section-heading"><div><div class="section-eyebrow">INFORMATIONS ET THÉMATIQUES</div><h2>Les sujets au cœur de notre engagement</h2><p>Des contenus consacrés à la citoyenneté, à la jeunesse, à la solidarité et au développement.</p></div></div>
         <div class="filter-row"><UButton v-for="f in filters" :key="f" :color="active===f?'primary':'neutral'" :variant="active===f?'solid':'outline'" @click="active=f">{{f}}</UButton></div>
         <div class="news-grid">
           <UCard v-for="item in filtered" :key="item.title" class="news-card" :ui="{body:'p-0 sm:p-0'}">
-            <img class="news-image" :src="item.image" :alt="'Illustration : '+item.title"/>
+            <img class="news-image" :src="item.image" :alt="'Illustration : '+item.title" loading="lazy" decoding="async"/>
             <div class="news-body"><UBadge>{{item.category}}</UBadge><h3>{{item.title}}</h3><p>{{item.excerpt}}</p></div>
           </UCard>
         </div>
