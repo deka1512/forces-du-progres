@@ -1,23 +1,23 @@
 <script setup lang="ts">
 const year=new Date().getFullYear()
-const links=[{label:'Présidence nationale',to:'/presidence'},{label:'Organisation',to:'/organisation'},{label:'Actualités',to:'/actualites'},{label:'Activités & médias',to:'/activites'},{label:'Contact',to:'/contact'}]
+const links=[{label:'Accueil',to:'/'},{label:'Présidence nationale',to:'/presidence'},{label:'Organisation',to:'/organisation'},{label:'Actualités',to:'/actualites'},{label:'Activités & médias',to:'/activites'},{label:'Contact',to:'/contact'}]
 </script>
 <template>
   <footer class="site-footer">
     <UContainer>
       <div class="footer-main">
         <div>
-          <NuxtLink to="/" class="brand brand-light"><span class="brand-mark">FP</span><span class="brand-copy"><strong>FORCE DU PROGRÈS</strong><small>PORTAIL NATIONAL · RDC</small></span></NuxtLink>
-          <p>Un espace de présentation, d’information et de valorisation de l’engagement citoyen, de la solidarité et de la participation communautaire.</p>
+          <NuxtLink to="/" class="brand brand-light"><span class="brand-logo-slot">LOGO</span><span class="brand-copy"><strong>FORCE DU PROGRÈS</strong><small>PORTAIL NATIONAL · RDC</small></span></NuxtLink>
+          <p class="footer-brand-note">Portail institutionnel de présentation et d’information de la Force du Progrès en République démocratique du Congo.</p>
         </div>
-        <div class="footer-links">
-          <h3>Navigation</h3>
+        <nav class="footer-links" aria-label="Navigation de pied de page">
+          <h3>Explorer le portail</h3>
           <NuxtLink v-for="item in links" :key="item.to" :to="item.to">{{item.label}}</NuxtLink>
-        </div>
+        </nav>
         <div class="footer-links">
-          <h3>Restons en contact</h3>
-          <p>Retrouvez les informations institutionnelles et les canaux de communication publiés par la coordination.</p>
-          <UButton to="/contact" color="neutral" class="text-white" variant="outline">Accéder au contact</UButton>
+          <h3>Information & contact</h3>
+          <p class="footer-contact-note">Pour toute demande institutionnelle, médiatique ou organisationnelle, consultez l’espace de contact du portail.</p>
+          <UButton to="/contact" color="neutral" class="text-white" variant="outline">Accéder au contact <UIcon name="i-lucide-arrow-up-right"/></UButton>
         </div>
       </div>
       <div class="footer-bottom">
