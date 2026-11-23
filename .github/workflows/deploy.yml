@@ -1,0 +1,71 @@
+name: CI/CD - Force du Progrès
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-fdp-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build SSG (Nuxt Generate)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Generate static website
+        run: npm run generate
+
+      - name: Upload generated website
+        uses: actions/upload-artifact@v4
+        with:
+          name: fdp-static-site
+          path: .output/public/
+          if-no-files-found: error
+          retention-days: 1
+
+  deploy:
+    name: Deploy FTPS (o2switch)
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+
+    steps:
+      - name: Download generated website
+        uses: actions/download-artifact@v4
+        with:
+          name: fdp-static-site
+          path: ./public/
+
+      - name: Deploy with SamKirkland FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: ./public/
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          dangerous-clean-slate: false
