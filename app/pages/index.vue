@@ -27,8 +27,20 @@ const priorities = [
     </section>
     <section class="intro-strip">
       <UContainer class="intro-grid">
-        <div><div class="section-eyebrow">UNE AMBITION COLLECTIVE</div><h2>Agir ensemble.<br/><span>Faire progresser la société.</span></h2></div>
-        <p>La Force du Progrès est présentée ici à travers les valeurs de responsabilité, de solidarité, de dialogue et de participation citoyenne. Ce portail permet de découvrir les repères du mouvement, ses thématiques d’engagement et ses espaces de communication.</p>
+        <div class="intro-brand">
+          <div class="section-eyebrow">UNE AMBITION COLLECTIVE</div>
+          <h2>Agir ensemble.<br/><span>Faire progresser la société.</span></h2>
+          <div class="intro-logo-placeholder" role="img" aria-label="Emplacement réservé à la photographie du logo officiel de la Force du Progrès">
+            <UIcon name="i-lucide-image"/>
+            <strong>LOGO OFFICIEL</strong>
+            <small>EMPLACEMENT RÉSERVÉ À L’IMAGE DU MOUVEMENT</small>
+          </div>
+        </div>
+        <div class="intro-copy">
+          <p>La Force du Progrès porte une ambition collective : encourager l’engagement citoyen, renforcer la solidarité et contribuer à une société où chaque communauté peut prendre part à la dynamique nationale.</p>
+          <p>À travers ses repères institutionnels, ses structures et ses espaces de communication, ce portail présente les orientations du mouvement et facilite l’accès à l’information. Il met en lumière les enjeux de la jeunesse, de la cohésion sociale, du dialogue, de la responsabilité publique et du développement local.</p>
+          <p>De Kinshasa aux différentes provinces de la République démocratique du Congo, l’objectif est de rapprocher les initiatives, de valoriser les contributions et de faire progresser le dialogue au service de l’intérêt collectif.</p>
+        </div>
       </UContainer>
     </section>
     <section class="content-section">
