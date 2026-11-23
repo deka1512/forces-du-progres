@@ -437,3 +437,50 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
 .site-header .brand-mark{
   color:var(--color-white);
 }
+
+
+/* v0.0.8 — blanc explicite sur les titres et textes des sections sombres */
+:is(
+  .home-hero,
+  .page-hero,
+  .president-band,
+  .site-footer,
+  .dark-section,
+  .section-dark,
+  .bg-dark,
+  .bg-primary-dark
+) :is(
+  h1,h2,h3,h4,h5,h6,
+  p,li,span,small,strong,b,
+  label,dt,dd,figcaption,
+  blockquote
+){
+  color:var(--color-white)!important;
+}
+
+/* Les accents jaunes restent distincts du texte courant */
+:is(.home-hero,.page-hero,.president-band,.site-footer,.dark-section,.section-dark,.bg-dark,.bg-primary-dark)
+:is(.eyebrow,.section-eyebrow),
+.home-hero h1 em,
+.president-band h2 span,
+.site-footer .footer-links h3,
+.site-footer .footer-bottom a{
+  color:var(--color-yellow)!important;
+}
+
+/* Les liens de navigation restent blancs, sauf l’état actif/hover */
+.site-header .nav-link,
+.site-header .mobile-nav-link{
+  color:var(--color-white)!important;
+}
+.site-header .nav-link.active,
+.site-header .nav-link:hover,
+.site-header .mobile-nav-link:hover{
+  color:var(--color-yellow)!important;
+}
+
+/* Conserver le texte foncé du bouton jaune */
+.site-header .header-cta,
+.site-header .header-cta :is(span,strong){
+  color:var(--color-primary-dark)!important;
+}
