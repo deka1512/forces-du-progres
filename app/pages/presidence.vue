@@ -1,11 +1,11 @@
 <script setup lang="ts">useSeoMeta({title:'Présidence nationale | Force du Progrès'})</script>
 <template>
   <div>
-    <PageHero title="La présidence nationale" description="La direction nationale assure la représentation du mouvement et contribue à la coordination de ses structures."/>
+    <PageHero title="La présidence nationale" description="La direction nationale assure la représentation du mouvement et contribue à la coordination de ses structures." eyebrow="GOUVERNANCE · REPRÉSENTATION" image="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=48"/>
     <section class="content-section">
       <UContainer>
         <div class="profile-grid">
-          <div class="profile-placeholder"><strong>JM</strong><span>Direction nationale</span></div>
+          <div class="profile-visual"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=45" alt="Illustration d’une réunion de coordination" loading="lazy" decoding="async"/><div class="profile-visual-caption">Représentation · Coordination · Dialogue</div></div>
           <div>
             <div class="section-eyebrow">PRÉSIDENT NATIONAL</div>
             <h2 class="profile-name">Joel Mpaba Mukiri</h2>
