@@ -209,3 +209,135 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
     color:#f5f8fc;
   }
 }
+
+
+/* v0.0.5 — stabilité de l’introduction et lisibilité des contenus */
+.intro-strip{
+  background:linear-gradient(135deg,#f2f6fa 0%,#eaf1f6 100%);
+}
+.intro-grid{
+  grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);
+  align-items:center;
+  gap:clamp(34px,5vw,72px);
+}
+.intro-brand h2{
+  max-width:560px;
+  margin:14px 0 24px;
+  color:#142b42;
+  font-size:clamp(34px,4vw,49px);
+  line-height:1.12;
+}
+.intro-brand h2 span{color:#0878b9}
+.intro-logo-placeholder{
+  width:min(100%,390px);
+  min-height:178px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  border:1px dashed #8da6ba;
+  border-radius:13px;
+  background:linear-gradient(145deg,#fff,#e9f1f7);
+  color:#183750;
+  text-align:center;
+}
+.intro-logo-placeholder svg{width:36px;height:36px;color:#0878b9}
+.intro-logo-placeholder strong{font:800 17px var(--font-heading);letter-spacing:.08em}
+.intro-logo-placeholder small{max-width:260px;color:#526b80;font-size:10px;font-weight:700;letter-spacing:.08em}
+.intro-copy{max-width:680px}
+.intro-copy p{
+  margin:0 0 15px;
+  color:#344e65;
+  font-size:16px;
+  line-height:1.85;
+}
+.intro-copy p:last-child{margin-bottom:0}
+
+/* Titres et textes des axes d’engagement et de l’ancrage national */
+.content-section .section-heading h2{
+  color:#142b42;
+  font-weight:800;
+}
+.content-section .section-heading p{
+  color:#4d647a;
+  font-size:15px;
+}
+.three-grid .u-card,
+.stat-grid .u-card{
+  height:100%;
+  border:1px solid #dce6ee;
+  background:#fff;
+  color:#18324b;
+  box-shadow:0 8px 24px #142b420b;
+}
+.three-grid .u-card h3{
+  color:#142b42;
+  font-weight:800;
+}
+.three-grid .u-card p{
+  color:#435c72;
+  font-size:15px;
+  line-height:1.75;
+}
+.three-grid .u-card>svg{color:#0878b9}
+.stat-grid .u-card strong{
+  color:#0878b9;
+  font-size:46px;
+}
+.stat-grid .u-card b{
+  color:#142b42;
+  font-size:16px;
+}
+.stat-grid .u-card small{
+  color:#526a80;
+  font-size:13px;
+}
+.province-heading h2{color:#142b42}
+.province-item{color:#243e55;background:#fff}
+.province-item span{color:#0878b9}
+
+/* Contraste des bannières sombres sur toutes les pages */
+.page-hero{
+  color:#fff;
+  background-color:#10283f;
+}
+.page-hero.has-image:before{
+  background:linear-gradient(90deg,#071a2cf5 0%,#10283fe8 56%,#10283fba 100%);
+}
+.page-hero .eyebrow{
+  color:#ffdc59;
+}
+.page-hero .eyebrow span{background:#ffdc59}
+.page-hero h1{
+  color:#fff;
+  text-shadow:0 2px 18px #06182755;
+}
+.page-hero p{
+  max-width:760px;
+  color:#f1f6fb;
+  font-size:18px;
+  font-weight:500;
+  line-height:1.8;
+  text-shadow:0 1px 10px #06182755;
+}
+.president-band .section-eyebrow{color:#ffdc59}
+.president-band .president-inner h2{color:#fff}
+.president-band .president-inner p{color:#f0f5fa;font-size:14px}
+.site-footer .footer-brand-note,
+.site-footer .footer-contact-note{color:#e2eaf2!important}
+.site-footer .footer-links a{color:#eaf0f6}
+.site-footer .footer-links h3{color:#ffdc59}
+.contact-detail b{color:#18324b}
+.contact-detail small{color:#405970;font-size:13px}
+.contact-note{color:#624e1a}
+@media(max-width:850px){
+  .intro-grid{grid-template-columns:1fr;gap:28px}
+  .intro-logo-placeholder{min-height:150px;width:100%}
+  .page-hero.has-image:before{background:linear-gradient(90deg,#071a2cf2,#10283fdc)}
+}
+@media(max-width:600px){
+  .intro-brand h2{font-size:35px}
+  .intro-copy p{font-size:15px}
+  .page-hero p{font-size:16px}
+}
